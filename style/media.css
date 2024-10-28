@@ -1,0 +1,23 @@
+a[href^="contents/about.html"]:hover {
+    color: #333;
+    font-weight: 700;
+    transform: 0.5s;
+}
+
+a[href^="contents/about.html"]:hover {
+    color: #333;
+    font-weight: 700;
+    transform: 0.5s;
+}
+
+a[href^="contents/resume.html"]:hover {
+    color: #333;
+    font-weight: 700;
+    transform: 0.5s;
+}
+
+a[href^="contents/resume.html"]:hover {
+    color: #333;
+    font-weight: 700;
+    transform: 0.5s;
+}
