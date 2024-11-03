@@ -452,6 +452,42 @@
   .sub-title-section{
     margin-bottom: 12px;
   }
+
+  .flexbox {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-right-profile {
+    order: -1; /* This ensures it's at the top */
+    margin-left: 0;
+    margin-bottom: 48px;
+    width: 100%; /* Ensure full width on mobile */
+  }
+
+  .item-left-info {
+    margin-right: 0;
+    width: 100%; /* Ensure full width on mobile */
+  }
+
+  .about-list {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .about-item:last-child {
+    margin-right: 0;
+  }
+
+  .social-link {
+    margin-top: 32px;
+  }
+
+  /* Ensure images in the profile section are responsive */
+  .item-right-profile img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* Typography adjustments */
