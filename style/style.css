@@ -69,13 +69,13 @@ p{
 }
 
 .caption-s{
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 400;
     color: #949494;
 }
 
 .caption-s-br{
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 400;
     color: #333;
 }
@@ -203,7 +203,7 @@ nav a {
     padding-right: 2%;
 }
 
-.intro-content h2 {
+.intro-content h1 {
     margin-bottom: 36px;
 }
 

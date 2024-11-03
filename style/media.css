@@ -28,7 +28,7 @@
     width: 100%;
   }
 
-  .intro h2{
+  .intro h1{
     margin-bottom: 8px;
   }
 
@@ -210,7 +210,7 @@
     margin-bottom: 24px;
   }
 
-  .intro h2{
+  .intro h1{
     width: 100%;
     margin-bottom: 12px;
     font-size: 1.4rem;
