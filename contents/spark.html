@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spark</title>
+    <title>Gamified Goal Tracker</title>
     <link rel="icon" href="/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,340 +25,175 @@
     </noscript>
     <div class="portfolio">
         <header>
-            <a href="/index.html" class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo">
-                    <img src="/assets/logo.svg" alt="logo">
+                    <img src="/assets/logo-v1.svg" alt="logo">
                 </div>
             </a>
-            <nav>
-                    <a href="/contents/about.html" class="nav-link about-link">About</a>
-                    <a href="https://drive.google.com/file/d/1nDUQtVkHuC0QhIHjICQvaAzOvIQD-Pqw/view?usp=sharing" target="_blank" class="nav-link resume-link">Resume</a>
+            <nav class="nav-bar">
+                <a href="about.html" class="about-link">About</a>
+                <a href="https://drive.google.com/file/d/1rtgHOqpUDJP6BszD0UEvJiP6X1-a9-if/view?usp=sharing" target="_blank" class="resume-link">Resume</a>
             </nav>
         </header>
         <main>
-            <section class="hero">
+            <section class="hero" id="overview">
+                <section class="hero-banner">
+                        <img src="/assets/spark-thumbnail-wide.png" alt="Spark app thumbnail" class="wide-thumbnail">
+                </section>
+                <div class="content-wrapper">
                 <div class="hero-content">
-                    <h1>Spark</h1>
-                    <p>Design a goal tracking app based on user data and develop a design system</p>
+                        <h1>Gamified Goal Tracker</h1>
+                        <p>Designed a data-driven goal tracking app, leading to a nomination in the <a href="https://ux-design-awards.com/winners/2024-2-spark-goal-tracking-app-with-gamification" target="_blank" class="link">UX Design Awards 2024.</a></p>
                 </div>
-            </section>
-            <section class="video-section">
-                <div class="wide-video-wrapper">
-                    <iframe src="https://player.vimeo.com/video/1019665238?badge=0&amp;background=1&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="myedit-thumbnail"></iframe>
-                </div> 
-            </section>
-            <!-- project-overview -->
-            <section class="container">
-                <div class="flexbox">
+                    <div class="summary">
                     <div class="item-left">
                         <div class="item-list">
-                            <hr>
-                            <p class="caption-s">overview</p>
-                            <p> Every year, people set New Year’s resolutions, but 92% of them end in failure. To uncover the reasons behind this and offer solutions that help people stay on track with their goals, we started project Spark.
-                                <br><br> I was involved in the end-to-end process, from service planning to product design, with a primary focus on branding design and optimizing the goal-setting process. Our team is currently working with developers to launch an MVP by the end of the year.</p>
+                                <p class="bold">ROLE</p>
+                                <h4>Product Designer</h4> 
+                                <p class="caption-s-br">Oversaw the entire process, from UX research to product design, with a primary focus on branding design and optimizing the goal-setting process.</p> 
+                            </div>
                         </div>
-                     </div>
-                    <div class="item-right">
+                        <div class="item-center">
                         <div class="item-list">
-                            <hr>
-                            <p class="caption-s">Product</p>
+                                <p class="bold">PRODUCT</p>
                             <p class="caption-s-br">ios</p>
                         </div>
                         <div class="item-list">
-                            <hr>
-                            <p class="caption-s">What I did</p>
-                            <p class="caption-s-br">Diary Study & Interview<br>Product design<br>User testing</p>
+                                <p class="bold" >TEAM</p>
+                                <p class="caption-s-br">2 Designer</p>
+                            </div>                     
+                        </div>
+                        <div class="item-right">
+                            <div class="item-list">
+                                <p class="bold">TOOLS</p>
+                                <p class="caption-s-br">Figma, Adobe Suite</p>
                         </div>
                         <div class="item-list">
-                            <hr>
-                            <p class="caption-s">My Role</p>
-                            <p class="caption-s-br">UIUX Designer</p>
-                        </div>
-                        <div class="item-list">
-                            <hr>
-                            <p class="caption-s">Timeline</p>
-                            <p class="caption-s-br">Mar 2024- Present</p>
+                                <p class="bold">Duration</p>
+                                <p class="caption-s-br">4 months</p>
+                            </div>                       
                         </div>                       
                     </div>
                 </div>
             </section>
             <section class="content-details">
                 <!-- summary -->
-                <div class="container gray">
-                    <img src="/assets/spark-summary.gif" alt="thumbnail-image" class="summary-thumbnail">                    
+                <div class="container gray" id="summary">
+                    <img src="/assets/spark-summary.png" alt="thumbnail-image" class="summary-thumbnail">                    
                     <div class="content-wrapper">
                         <div class="title-section">
-                            <p class="caption-s-br">Summary</p>
-                            <h2>Grow a specific and small goal gradually</h2>
+                            <h1>Summary</h1>
                         </div>
                         <div class="content-section">
+                            <hp class="bold">Grow a specific and small goal gradually</hp>
                         <p class="caption-br">Most goal-tracking apps focus on extrinsic motivation like rewards rather than on setting goals. This leads users to set overly ambitious or vague goals. We designed a service that focuses on gradually growing a specific goal from the start, ultimately increasing the goal achievement rate.</p>
                         </div>
                     </div>
                 </div>
-                <!-- challenge -->
-                <div class="container">
+                <!-- problem -->
+                <div class="container" id="problem">
                     <div class="content-wrapper">
                         <div class="title-section">
-                            <p class="caption-s-br">Challenge</p>
-                            <h2>Find a way to maintain<br>people’s behavior</h2>
+                            <h1>Problem</h1>
                         </div>
                         <div class="content-section">
-                        <p class="caption-br">Most people begin their goals with strong willpower, yet maintaining that momentum can be challenging, often resulting in abandonment. This project aimed to help people enjoyably pursue their goals by providing engaging tools that keep them motivated and on track.</p>
+                            <p class="bold">Identified a pattern where unrealistic goal-setting leads to failure.</p>
+                            <p class="caption-br">Through diary study and contextual interview, we uncovered key issues in how users set and maintain goals.</p>
                         </div>
                     </div>
-                    <div class="thumbnail-image">
-                        <img src="/assets/spark-app-group.png" alt="goal-tracking apps" class="img-gray">
-                        <p class="caption-s"><i>Goal tracking apps: timer-based and community-driven</i></p>
-                    </div>                
-                </div>
-                <!-- Market Research -->
-                <div class="container gray">
-                    <div class="content-wrapper center-align">
-                        <div class="title-section">
-                            <p class="caption-s-br">Market Research</p>
-                            <h2>Goal-tracking apps commonly don’t rely on willpower,<br>but their strategies for maintaining goals differ.</h2>
+                    <div class="content-list spark-content-list">
+                        <div class="content-item spark-content-item">
+                            <img src="/assets/spark-carousel-01.png" alt="multiple, difficult goal" class="thumbnail-image">
                         </div>
-                        <div class="content-section">
-                        <p class="caption-br">For market research, we chose Todomate (community-driven) and Routinery (timer-based).<br class="hidden-br">
-                            Both avoid relying on willpower but differ in their goal-sustaining methods. Todomate focuses on extrinsic motivation,<br class="hidden-br"> 
-                            while Routinery emphasizes creating an environment that supports habit formation. </p>
+                        <div class="content-item spark-content-item">
+                            <img src="/assets/spark-carousel-02.png" alt="Randomly add recommended goals" class="thumbnail-image">
+                        </div>
+                        <div class="content-item spark-content-item">
+                            <img src="/assets/spark-carousel-03.png" alt="tiresome to track goal" class="thumbnail-image">
                         </div>
                     </div>
-                    <div class="thumbnail-image">
-                        <img src="/assets/spark-marketresearch.png" alt="Todomate, Routinery">
-                        <p class="caption-s"><i>Todo mate, Routinery</i></p>
-                    </div>
-                </div>
-                <!-- customer-research -->
-                <div class="container">
-                        <div class="left-title-section">
-                            <p class="caption-s-br">Customer Research</p>
-                            <h2>Impact of extrinsic motivation & environmental changes on goal achievement</h2>
-                        </div>
-                    <div class="flex-container">
-                        <div class="flex-content">
-                            <hr>
-                            <p class="caption-s title">Research Method</p>
-                            <ul>
-                                <li class="caption-s-br">Diary Study</li>
-                                <li class="caption-s-br">Contextual Interview</li>
-                            </ul>
-                        </div>
-                        <div class="flex-content">
-                            <hr>
-                            <p class="caption-s title">Test Group</p>
-                            <ul>
-                                <li class="caption-s-br">Group A: Todo mate (2 testers)</li>
-                                <li class="caption-s-br">Group B: Routinery (2 testers)</li>
-                            </ul>                        
-                        </div>
-                        <div class="flex-content">
-                            <hr>
-                            <p class="caption-s title">Mission</p>
-                            <ul>
-                                <li class="caption-s-br">Set a goal and maintain it for 3 days</li>
-                                <li class="caption-s-br">Share your experience in achieving a goal</li>
-                            </ul>  
-                        </div>
-                    </div>
-                        <div class="sub-title-section">
-                            <hr>
-                            <p class="caption-s title">Process</p>
-                        </div>
-                        <div class="flex-container">
-                            <div class="flex-content">
-                                <p class="caption-s-br b">1. Collect feedback</p>
-                                <img src="/assets/spark-cr-1.png" alt="diarystudy-feedback" class="flex-img">
-                            </div>
-                            <p class="caption-s-br b hidden-arr">&rarr;</p> 
-                            <div class="flex-content">
-                                <p class="caption-s-br b">2. Analyze screen & audio recordings</p>
-                                <img src="/assets/spark-cr-2.png" alt="recorded screen" class="flex-img no-margin">
-                            </div>
-                            <p class="caption-s-br b hidden-arr">&rarr;</p>
-                            <div class="flex-content">
-                                <p class="caption-s-br b">3. Conduct interviews</p>
-                                <img src="/assets/spark-cr-3.png" alt="contextual interview" class="flex-img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- discovery -->
-                <div class="container gray">
-                    <div class="content-wrapper center-align">
-                        <div class="title-section">
-                            <p class="caption-s-br">Discovery</p>
-                            <h2>Customer Insights</h2>
-                        </div>
-                    </div>
-                    <div class="grid-container">
-                                <div class="grid-item">
-                                        <img src="/assets/spark-insight-1.png" alt="multiple, difficult goal" class="grid-img">
-                                        <h3>Set multiple, difficult goals at the start</h3>
-                                        <p class="caption-br">External motivation leads users to set multiple and challenging<br class="hidden-br"> goals, but their enthusiasm fades and results in failure.</p>
-                                </div>
-                                <div class="grid-item">
-                                    <img src="/assets/spark-insight-2.png" alt="Randomly add recommended goals" class="grid-img">
-                                        <h3>Randomly add recommended goals</h3>
-                                        <p class="caption-br">Recommended goals were added without strong intent,<br class="hidden-br">leading to quick abandonment.</p>
-                                </div>
-                            <div class="grid-item">
-                                        <img src="/assets/spark-insight-3.png" alt="tiresome to track goal" class="grid-img">
-                                        <h3>Tracking goals feels like a chore</h3>
-                                        <p class="caption-br">Users want a quick way to log their progress<br class="hidden-br">but found the process cumbersome.</p>
-                            </div>
-                            <div class="grid-item">
-                                    <img src="/assets/spark-insight-4.png" alt="Ignore push notifications" class="grid-img">
-                                        <h3>Ignore push notifications</h3>
-                                        <p class="caption-br">Both services use push notifications to remind users.<br class="hidden-br"> However, people often ignore them, leading to fatigue.</p>
-                            </div>
-                    </div>
-                </div>
-                <!-- vision -->
-                <div class="container">
-                    <div class="content-wrapper">
-                        <div class="title-section">
-                            <p class="caption-s-br">Our vision</p>
-                            <h2>Unlock potential,<br class="hidden-br"> track success!</h2>
-                        </div>
-                        <div class="content-section">
-                            <p class="caption-br">Our vision is to help people accomplish the goals they genuinely aim to achieve.<br class="hidden-br">We have identified three key design goals to address in our final solution.</p>
-                        </div>
-                    </div>
-                    <div class="sub-title">
-                        <p class="caption-s-br">Design Goal</p>
-                    </div>
-                    <div class="flexbox three-items">
-                        <div class="flex-item">
-                                <div class="icon-wrapper"><img src="/assets/spark-dg-1.png" alt="specific goal icon" class="flexbox-icon"></div>
-                                <h3>Set specific initial goals</h3>
-                                <p class="caption">Start with specific and manageable goal<br class="hidden-br"> to increase the success rate.</p>
-                        </div>
-                        <div class="flex-item">
-                            <div class="icon-wrapper"><img src="/assets/spark-dg-2.png" alt="growth icon" class="flexbox-icon"></div>
-                                <h3>Track and showcase growth</h3>
-                                <p class="caption">Gradually increase goal difficulty<br class="hidden-br"> to help users track their progress.</p>
-                        </div>     
-                        <div class="flex-item">
-                            <div class="icon-wrapper"><img src="/assets/spark-dg-3.png" alt="Randomly add recommended goals" class="flexbox-icon"></div>
-                                <h3>Make goal tracking fun</h3>
-                                <p class="caption">Make the process enjoyable and easy to<br class="hidden-br"> encourage consistent goal tracking.</p>
-                        </div>                           
-                    </div>
-                </div>
-                <!-- Theming Decisions -->
-                <div class="container gray">
-                    <div class="content-wrapper">
-                        <div class="title-section">
-                            <p class="caption-s-br">Theming Decisions</p>
-                            <h2>What is your inner spark?</h2>
-                        </div>
-                        <div class="content-section">
-                            <p class="caption-br">We named the service "Spark" to convey the intention of helping people achieve the goals they hold in their hearts, and proceeded with branding design accordingly.</p>
-                        </div>
-                    </div>
-                    <div class="content-list">
-                        <hr>
-                        <div class="content-item">
-                            <h3 class="title">Branding</h3>
-                            <div class="content">
-                                <div class="img">
-                                <img src="/assets/spark-BI-1.png" alt="branding guideline" class="thumbnail-image">
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="content-item">
-                            <h3 class="title">Character Design</h3>
-                            <div class="content">
-                                <p class="caption">We designed the character to visually convey the message that sustained goal pursuit leads to gradual growth</p>
-                                <div class="img">
-                                <img src="/assets/spark-BI-2.png" alt="character design" class="thumbnail-image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- design-system -->
-                <div class="container">
-                    <div class="content-wrapper">
-                        <div class="title-section">
-                            <p class="caption-s-br">Design System</p>
-                            <h2>Ensure consistency</h2>
-                        </div>
-                        <div class="content-section">
-                        <p class="caption-br">We built and documented a design system to reduce redundant asset creation and improve development productivity. This ensures a consistent ux across all interfaces and enables clear communication with developers.</p>
-                        </div>
-                    </div>
-                    <div class="thumbnail-image">
-                        <img src="/assets/spark-design-system.png" alt="designsystem" class="thumbnail">
-                    </div>                
                 </div>
                 <!-- solution -->
-                <div class="container gray">
+                <div class="container gray" id="solution">
+                    <div class="content-wrapper">
                         <div class="title-section">
-                            <p class="caption-s-br">Solution</p>
-                            <h2>Introducing Spark</h2>
+                            <h1>Solution</h1>
                         </div>
+                        <div class="content-section">
+                            <p class="bold">Introducing Spark</p>
+                            <p class="caption-br">Spark is an app that helps users set small, measurable goals and track them enjoyably through gamification.</p>
+                        </div>
+                    </div>
                     <div class="content-list">
-                        <hr>
                         <div class="content-item">
-                            <h3 class="title">Guide to set small, measurable goals</h3>
+                            <h3 class="title"><span class="green-circle"></span>Guide to set small, measurable goals.</h3>
                             <div class="content">
-                                <p class="caption">To prevent setting overly ambitious goals early on and facing failure, Spark helps users establish small, measurable goals during the initial setup.</p>
                                 <div class="img">
                                 <img src="/assets/spark-solution-1.png" alt="goal-setting screen" class="thumbnail-image white-bg">
                                 </div>
                             </div>
                         </div>
-                        <hr>
                         <div class="content-item">
-                            <h3 class="title">Achieve goals gradually through levels</h3>
+                            <h3 class="title"><span class="green-circle"></span>Achieve goals gradually through levels</h3>
                             <div class="content">
-                                <p class="caption">To avoid the pitfalls of setting unrealistic goals, Spark divides progress into four levels, enabling users to gradually increase their goal difficulty over time.</p>
                                 <div class="img">
-                                <img src="/assets/spark-solution-2.png" alt="adjust-level screen" class="thumbnail-image  white-bg">
+                                    <img src="/assets/spark-solution-2.png" alt="increase goal difficulty" class="thumbnail-image white-bg">
                                 </div>
                             </div>
                         </div>
-                        <hr>
                         <div class="content-item">
-                            <h3 class="title">Make goal tracking fun with<br>engaging motion-based interaction</h3>
+                            <h3 class="title"><span class="green-circle"></span>Enjoyful goal tracking with motion-based interaction</h3>
                             <div class="content">
-                                <p class="caption">To encourage users to voluntarily enter the app without push notifications, Spark incorporates interactive features like shaking the device to log goals.</p>
                                 <div class="img">
-                                <img src="/assets/spark-solution-3.png" alt="goal-tracking screen" class="thumbnail-image  white-bg">
+                                    <img src="/assets/spark-solution-3.png" alt="tracking goal" class="thumbnail-image white-bg">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- takeaway -->
-                <div class="container dk-gray">
-                    <h2 class="head-title white-text">Takeaways</h2>
-                    <div class="content-list">
-                        <div class="content-item">
-                            <h3 class="title white-text">International Acclaim</h3>
-                            <div class="content">
-                                <p class="caption xlg">Project Spark were honored to be nominated in the prestigious UX Design Awards competition.</p>
-                                <div class="thumbnail-image">
-                                    <img src="/assets/spark-takeaway.png" alt="nominated in UX Design Awards" class="thumbnail">
-                                    <p class="caption-s link "><a href="https://ux-design-awards.com/winners/2024-2-spark-goal-tracking-app-with-gamification"><i class="lt-gray">Spark nominated in UX Design Awards</i></a></p>
+        <!-- impact -->
+        <div class="container" id="impact">
+            <div class="content-wrapper">
+                <div class="title-section">
+                    <h1>Takeaways</h1>
                                 </div>    
-                            </div>
-                        </div>
-                        <div class="content-item">
-                            <h3 class="title white-text">Cohesive Digital Experience</h3>
-                            <div class="content">
-                                <p class="caption xlg">We built a design system and UX document with the goal of launching the MVP. Through this process, I have learned how to create a consistent digital experience across the entire app by componentizing reusable assets.</p>
-                            </div>
+                <div class="content-section">
+                    <p class="bold">Cohesive Digital Experience</p>
+                    <p class="caption-br">While building a design system and UX documentation, I learned to create a cohesive digital experience by structuring reusable components and ensuring consistency across the app.</p>     
+                    <p class="bold" style="margin-top: 36px;">Found my passion for micro-interactions</p>
+                    <p class="caption-br">Through this project, I learned the powerful impact micro interactions can have on user experience, which led me to dive deeper into studying interactions.</p>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h4>Moonyoung Kim © 2025</h4>
+                    <p class="caption-br">Powered by Spotify & endless coffee</p>
+                </div>
+                <div class="footer-links">
+                    <a class="caption-br" href="mailto:moon.design0319@gmail.com">Email ↗</a>
+                    <a class="caption-br" href="https://www.linkedin.com/in/moon-young-kim/" target="_blank">Linkedin ↗</a>
+                    <a class="caption-br" href="https://www.behance.net/moonyoungkim" target="_blank">Behance ↗</a>
+                    <a class="caption-br" href="https://medium.com/@moon.design0319" target="_blank">Medium ↗</a>
+                </div>
+            </div>
+        </footer>
+        <nav class="page-slider">
+            <div class="progress-line">
+                <div class="progress-fill"></div>
+            </div>
+            <ul>
+                <li><a href="#overview" class="slider-link active">Overview</a></li>
+                <li><a href="#summary" class="slider-link">Summary</a></li>
+                <li><a href="#problem" class="slider-link">Problem</a></li>
+                <li><a href="#solution" class="slider-link">Solution</a></li>
+                <li><a href="#impact" class="slider-link">Takeaways</a></li>
+            </ul>
+        </nav>
+        <script src="../script.js"></script>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
