@@ -9,32 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    const hoverTrigger = document.querySelector('.hover-trigger');
-    const hoverGif = document.querySelector('.hover-gif');
-
-    if (hoverTrigger && hoverGif) {
-        hoverTrigger.addEventListener('mouseenter', function() {
-            hoverGif.style.display = 'block';
-            setTimeout(() => {
-                hoverGif.classList.add('visible');
-            }, 10);
-        });
-
-        hoverTrigger.addEventListener('mouseleave', function() {
-            hoverGif.classList.remove('visible');
-            setTimeout(() => {
-                hoverGif.style.display = 'none';
-            }, 300);
-        });
-
-        document.addEventListener('mousemove', function(e) {
-            if (hoverGif.classList.contains('visible')) {
-                requestAnimationFrame(() => {
-                    hoverGif.style.left = e.clientX + 'px';
-                    hoverGif.style.top = e.clientY + 'px';
-                });
-            }
-        });
+    // Check initial scroll position
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
     }
 
     const introButton = document.querySelector('.intro-button');
@@ -85,6 +62,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const scrollProgress = (window.scrollY / documentHeight) * 100;
         
         progressFill.style.height = `${scrollProgress}%`;
+
+        // Check if we're in the next-project section
+        const nextProjectSection = document.getElementById('next-project');
+        if (nextProjectSection) {
+            const nextProjectTop = nextProjectSection.offsetTop;
+            if (scrollPosition >= nextProjectTop) {
+                // Reset all active states when in next-project section
+                sliderLinks.forEach(link => link.classList.remove('active'));
+                return; // Exit early to prevent other sections from being activated
+            }
+        }
 
         sectionElements.forEach((section, index) => {
             if (!section) return;

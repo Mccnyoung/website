@@ -71,10 +71,6 @@
     }
 
     /* Project thumbnails */
-    .hero-banner {
-        margin: 0 -40px;
-        width: calc(100% + 80px);
-    }
 
     .project-list {
         gap: 60px;
@@ -103,6 +99,29 @@
     .page-slider {
         display: none;
     }
+
+    /* Next project section - Tablet */
+    #next-project {
+        padding: 80px 40px;
+    }
+
+    #next-project h1 {
+        font-size: 2rem;
+        margin-bottom: 36px;
+    }
+
+    .project-info {
+        padding: 36px;
+    }
+
+    .project-info h2 {
+        font-size: 1.6rem;
+        margin: 8px 0 4px 0;
+    }
+
+    .project-info .caption-br {
+        font-size: 0.9rem;
+    }
 }
 
 /* Mobile: up to 767px */
@@ -110,48 +129,67 @@
     /* Global padding */
     .container,
     .intro,
-    .hero,
     .project-section,
     footer {
-        padding-left: 24px;
-        padding-right: 24px;
+        padding: 36px 24px;
+    }
+
+    .hero {
+        padding: 24px 24px 48px;
+    }
+
+    .hero-banner {
+        border-radius: 12px;
+    }
+
+    .hero-content {
+        margin-bottom: 36px;
     }
 
     header {
         padding: 16px 24px;
     }
 
+    .item-list .bold {
+        margin-bottom: 4px;
+    }
+
     /* Typography */
     .L { font-size: 2.4rem; }
     .M { font-size: 1.6rem; }
-    h1 { font-size: 1.8rem; }
+    h1 { font-size: 1.6rem; }
     h2 { font-size: 1.4rem; }
     h3 { font-size: 1rem; }
     p { font-size: 0.95rem; }
-    .hero-content h1 { font-size: 1.8rem; }
+    .hero-content h1 { font-size: 1.6rem; }
     .hero-content p { font-size: 1rem; }
     .caption { font-size: 0.85rem; }
     .caption-br { font-size: 0.85rem; }
     .caption-s { font-size: 0.8rem; }
     .caption-s-br { font-size: 0.8rem; }
 
+    .title-section h1{
+        font-size: 1.6rem;
+    }
+
     /* Layout */
     .content-wrapper {
         flex-direction: column;
     }
-
+    
+    .container .content-wrapper:first-child {
+        margin-bottom: 24px;
+    }
+    
+    
     .title-section,
     .content-section {
         width: 100%;
         margin-right: 0;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
     }
 
     /* Project thumbnails and images */
-    .hero-banner {
-        margin: 0 -24px;
-        width: calc(100% + 48px);
-    }
 
     .project-list {
         gap: 48px;
@@ -164,8 +202,16 @@
     /* Content sections */
     .content-list {
         gap: 24px;
-        margin: 0 -24px;
-        width: calc(100% + 48px);
+        width: 100%;
+    }
+
+    .spark-content-list{
+        gap: 8px;
+    }
+
+    .content-item {
+        padding: 0;
+        margin: 0;
     }
 
     .content-item {
@@ -175,19 +221,18 @@
 
     .content-item .title {
         font-size: 0.95rem;
-        padding: 16px 24px;
-        margin-bottom: 0;
+        margin-bottom: 12px;
     }
 
     .content-item p {
         padding: 0 24px;
     }
 
-    .content-item .caption {
-        padding: 0 24px;
+    .content-item .content .caption {
+        padding: 0 0;
         margin-bottom: 16px;
     }
-
+        
     .content-item .img {
         margin: 0;
         width: 100%;
@@ -223,7 +268,13 @@
     /* Summary section */
     .summary {
         flex-direction: column;
-        gap: 32px;
+        gap: 8px;
+    }
+
+
+    .summary-thumbnail {
+        margin-bottom: 24px;
+        border-radius: 12px;
     }
 
     .summary .item-left,
@@ -236,12 +287,6 @@
         margin-bottom: 24px;
     }
 
-    /* Spacing */
-    .container {
-        padding-top: 48px;
-        padding-bottom: 48px;
-    }
-
     .intro {
         padding-top: 60px;
         padding-bottom: 60px;
@@ -252,10 +297,10 @@
         display: none;
     }
 
-    /* Hide green circle in mobile */
-    .green-circle {
-        display: none;
-    }
+    /* Hide circle in mobile */
+    .red-circle {display: none;}
+    .green-circle {display: none;}
+
 
     /* Card image vertical alignment */
     .img-container {
@@ -269,6 +314,17 @@
         width: 100%;
         height: auto;
         display: block;
+        border-radius: 12px;
+    }
+
+    .video-container {
+        width: 100%;
+        border-radius: 12px;
+        background: none;
+    }
+
+    .video-container iframe {
+        border-radius: 12px;
     }
 
     /* Stats container and cards */
@@ -299,6 +355,69 @@
     .stat-card .caption-s {
         text-align: center;
     }
+
+    /* Next project section - Mobile */
+    #next-project {
+        padding: 36px 24px;
+    }
+
+    #next-project h1 {
+        font-size: 1.6rem;
+        margin-bottom: 24px;
+    }
+
+    .next-project-content {
+        display: flex;
+        flex-direction: column;
+        border-radius: 0;
+        overflow: visible;
+    }
+
+    .next-thumbnail {
+        border-radius: 12px;
+        margin-bottom: 16px;
+        width: 100%;
+        height: auto;
+    }
+
+    .project-info {
+        position: static;
+        padding: 0;
+        background: none;
+        overflow: visible;
+    }
+
+    .project-info h2 {
+        font-size: 1.4rem;
+        margin: 6px 0 4px 0;
+        color: #333;
+    }
+
+    .project-info .caption-br {
+        font-size: 0.85rem;
+        color: #333;
+        overflow: visible;
+    }
+
+    .project-info .chip {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+
+    .next-project-content:hover {
+        transform: none;
+    }
+}
+
+/* About page specific styles */
+.about-page {
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+/* Ensure no horizontal scroll */
+body {
+    overflow-x: hidden;
 }
 
 /* Hover effects */
