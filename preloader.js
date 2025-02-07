@@ -4,7 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
         return; // preloader를 이미 봤다면 실행하지 않음
     }
 
-    const emojis = ['⚽️', '🇰🇷', '🌎', '✨', '🇨🇦', '⚽️', '🇰🇷', '🌎', '✨', '🇨🇦'];
+    const emojis = [
+        '/assets/emoji/soccer.png',
+        '/assets/emoji/korea.png',
+        '/assets/emoji/earth.png',
+        '/assets/emoji/sparkle.png',
+        '/assets/emoji/canada.png',
+        '/assets/emoji/soccer.png',
+        '/assets/emoji/korea.png',
+        '/assets/emoji/earth.png',
+        '/assets/emoji/sparkle.png',
+        '/assets/emoji/canada.png'
+    ];
     const preloader = document.createElement('div');
     preloader.style.position = 'fixed';
     preloader.style.top = '0';
@@ -23,9 +34,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let index = 0;
     function showEmoji() {
         if (index < emojis.length) {
-            preloader.textContent = emojis[index];
+            // 이미지 엘리먼트 생성 및 스타일링
+            const img = document.createElement('img');
+            img.src = emojis[index];
+            img.style.width = '2rem';  // 이미지 크기 조절
+            img.style.height = '2rem';
+            
+            // preloader의 내용을 이미지로 교체
+            preloader.innerHTML = '';
+            preloader.appendChild(img);
+            
             index++;
-            setTimeout(showEmoji, 200);
+            setTimeout(showEmoji, 250);
         } else {
             // preloader를 봤다고 표시
             sessionStorage.setItem('preloaderShown', 'true');
