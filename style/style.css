@@ -238,71 +238,76 @@ header.scrolled {
 }
 
 /* project section */
-.project-section{
-    padding: 0 160px;
-    display: block;
-    margin-top: 80px; /* Add margin to ensure enough scroll space */
+.project-section {
+    padding: 0 160px 120px 160px;  /* top right bottom left */
+    margin-top: 80px;
 }
 
-.project-section h2{
+.project-section h2 {
     margin-top: 100px;
     margin-bottom: 80px;
 }
 
-.project-headline{
-    margin-bottom: 144px;
-}
-
-.project-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0;
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 96px 60px;
+    margin-bottom: 48px;
 }
 
 .project-items {
-    flex-basis: calc(50% - 2.5%); 
-    height: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 176px;
 }
 
-.project-descr h4{
-   font-size: 1.3rem;
-}
-
-.project-items:nth-child(odd) {
-    margin-right: 2.5%; 
-}
-
-.project-items:nth-child(even) {
-    margin-left: 2.5%; 
+.project-items.full-width {
+    grid-column: 1 / -1;
 }
 
 .project-img {
-    border-radius: 16px;
     width: 100%;
-    height: auto;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    border-radius: 16px;
     overflow: hidden;
     margin-bottom: 24px;
-    transition: transform 0.3s ease-in-out;
 }
 
-/* Only scale when hovering the image itself */
-.project-img:hover {
-    transform: scale(1.02);
-}
-
-/* Remove any previous project-link hover effects */
-.project-link:hover .project-img {
-    transform: none;
+.project-items.full-width .project-img {
+    padding-bottom: 36%; /* More wide aspect ratio for full-width items */
 }
 
 .project-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+    will-change: transform;
+}
+
+.project-items:hover .project-img img {
+    transform: scale(1.08);
+}
+
+.project-descr {
+    margin-top: 24px;
+}
+
+.project-descr h4 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.project-link {
     display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .project-thumbnail {
@@ -311,34 +316,17 @@ header.scrolled {
     display: block;
 }
 
-.project-link {
-    position: relative;
-    z-index: 2;
-    display: block;
-  }
-  
-  .project-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-  }
-  
-  .project-video iframe {
-    pointer-events: none;
-  }
+.project-link::before {
+    display: none;
+}
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-  }
+    display: none;
+}
+
+.project-video iframe {
+    pointer-events: none;
+}
 
 /* footer */
 
@@ -387,7 +375,7 @@ footer {
 
 /* Hero section */
 .hero {
-    width: 100vw;
+    width: 100%;
     padding: 60px 160px 80px;
 }
 
@@ -408,13 +396,14 @@ footer {
 }
 
 .hero .content-wrapper {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 24px 0px 0px;
 }
 
 .hero-content {
     margin-bottom: 80px;
+    width: 100%;
 }
 
 .hero-content h1 {
@@ -470,10 +459,8 @@ footer {
 
 /* Container section */
 .container {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    padding: 160px 80px;
+    padding: 80px 0;
+    width: 100%;
 }
 
 .container.gray {
@@ -484,10 +471,54 @@ footer {
     background-color: #111111;
 }
 
-.container .content-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
+.container h1 {
+    margin-bottom: 60px;
+    font-size: 2.6rem;
+    font-weight: 300;
+}
+
+.numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.numbered-list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.numbered-list-item h3 {
+    display: flex;
     align-items: flex-start;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.numbered-list-item .number {
+    color: #36D97D;
+    font-weight: 500;
+}
+
+.numbered-list-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+.solution-image {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.solution-image img.full-width-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
 }
 
 .video-section {
@@ -707,7 +738,7 @@ h4.sub-title{
 
 /* beta-launch */
 .beta-launch{
-    padding: 144px 180px;
+    padding: 144px 160px;
     display: block;
 }
 
@@ -974,7 +1005,7 @@ h4.sub-title{
   --color-primary: #333;
   --color-secondary: #949494;
   --color-accent: #FF6E22;
-  --color-light: #F5F5F7;
+  --color-light: #F5F5F7;'
   --spacing-large: 144px;
   --spacing-medium: 72px;
   --font-primary: 'Inter', sans-serif;
@@ -1001,21 +1032,13 @@ h4.sub-title{
 }
 
 /* 3. Use modern layout techniques */
-.project-list {
+/* Delete or comment out this entire section as it's causing conflicts */
+/* .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(calc(50% - 2.5%), 1fr));
   gap: var(--spacing-large) 5%;
   margin-bottom: 48px;
-}
-
-/* 4. Improve transitions */
-.project-items {
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-link:hover .project-img {
-    transform: scale(1.02);
-}
+} */
 
 /* moonyoung-hover effect */
 .hover-trigger {
@@ -1327,4 +1350,104 @@ main {
     border-radius: 100px;
     font-size: 0.8rem;
     font-weight: 500;
+}
+
+.numbered-list {
+    margin-top: 24px;
+}
+
+.numbered-list-item {
+    margin-bottom: 36px;
+}
+
+.numbered-list-item h3 {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.numbered-list-item h3 .number {
+    color: #FF6E22;
+}
+
+.numbered-list-image {
+    background-color: #F8F8F8;
+}
+
+.numbered-list-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dot-point {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* Problem 섹션의 숫자 색상 */
+#problem .number {
+    color: #FF6E22;
+}
+
+/* Solution 섹션의 숫자 색상 */
+#solution .number {
+    color: #36D97D;
+}
+
+/* Problem 섹션의 이미지 */
+#problem .numbered-list-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Solution 섹션의 이미지 - 전체 너비 */
+
+
+#solution .numbered-list-image img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+/* 태블릿 미디어 쿼리 */
+@media screen and (max-width: 1023px) {
+    #solution .numbered-list-image {
+        margin: 48px -40px 0;
+    }
+}
+
+/* 모바일 미디어 쿼리 */
+@media screen and (max-width: 767px) {
+    #solution .numbered-list-image {
+        margin: 48px -24px 0;
+    }
+}
+
+/* 전체 너비 이미지를 위한 새로운 클래스 */
+.full-width-wrapper {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    background-color: #fff;
+    margin-top: 48px;
+}
+
+.full-width-wrapper img {
+    width: 100%;
+    max-width: 1920px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.item-list p{
+    margin-bottom: 4px;
 }
